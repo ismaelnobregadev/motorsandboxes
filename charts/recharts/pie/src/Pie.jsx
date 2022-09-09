@@ -28,12 +28,12 @@ const PieExampleCompact = () => {
 
   const cols = [
     {
-      qField: "[Category]",
-      qLabel: "Category",
+      qField: "[Porte2]",
+      qLabel: "Porte",
     },
     {
-      qField: "=sum(Quantity * Price)",
-      qLabel: "Revenue",
+      qField: "=count(NUM_CNPJ)",
+      qLabel: "TOTAL EMPRESAS",
       // useFormatting: true,
       // qNumType: "M",
       // qNumFmt: "£#,##0",
@@ -43,6 +43,7 @@ const PieExampleCompact = () => {
   const { dataSet, select } = useData({
     cols,
   });
+  
 
   const { data, dataKeys, nameKey } = dataSet;
 
