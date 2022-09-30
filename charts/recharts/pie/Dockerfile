@@ -14,7 +14,7 @@ COPY . /app
 RUN yarn build
 
 
-FROM nginx:1.16.0-alpine
+FROM FROM nginxinc/nginx-unprivileged
 COPY --from=build /app/build /usr/share/nginx/html
 
 COPY nginx/nginx.conf /etc/nginx/conf.d
